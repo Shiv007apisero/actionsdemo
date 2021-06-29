@@ -28,11 +28,22 @@
 			<plugin>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
+				<version>3.4.2</version>
 				<extensions>true</extensions>
 				<configuration>
+					<cloudHubDeployment>
+					<uri>https://anypoint.mulesoft.com</uri>
+					<muleVersion>4.3.0</muleVersion>
+					<username>Shiv123rajJul</username>
+					<password>Shiv65@anypt</password>
+					<applicationName>github-actions</applicationName>
+					<environment>Sandbox</environment>
+					<region>US East (Ohio)</region>
+					<workers>1</workers>
+					<workerType>MICRO</workerType>
+					</cloudHubDeployment>
 				</configuration>
-			</plugin>
+				</plugin>
 		</plugins>
 	</build>
 

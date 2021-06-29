@@ -7,7 +7,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
 	<flow name="actionsdemoFlow" doc:id="7ce6e97f-337e-4fa7-aeac-de4b48f235de" >
 		<http:listener doc:name="Listener" doc:id="71fed522-f00b-4eea-8b50-032470fd476f" config-ref="HTTP_Listener_config" path="/actions" allowedMethods="GET"/>
-		<logger level="INFO" doc:name="Logger" doc:id="9392710a-4114-4087-ab78-4038f9bb4489" message="This is demo for Github Actions!!!"/>
+		<logger level="INFO" doc:name="Logger" doc:id="9392710a-4114-4087-ab78-4038f9bb4489" message="This is demo for Github Actions!!! Thank you"/>
 		<ee:transform doc:name="Transform Message" doc:id="a68ca613-ec86-4c98-9a54-89e9391489a2" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0

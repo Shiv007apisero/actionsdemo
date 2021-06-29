@@ -38,7 +38,7 @@
 					<password>Shiv65@anypt</password>
 					<applicationName>github-actions</applicationName>
 					<environment>Sandbox</environment>
-					<region>US East (Ohio)</region>
+					<region>us-east-2</region>
 					<workers>1</workers>
 					<workerType>MICRO</workerType>
 					</cloudHubDeployment>

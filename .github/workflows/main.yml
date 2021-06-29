@@ -25,8 +25,6 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      CLOUDHUB_USERNAME= ${{secrets.CLOUDHUB_USERNAME}}
-      CLOUDHUB_PASSWORD= ${{secrets.CLOUDHUB_PASSWORD}}
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
@@ -42,7 +40,7 @@ jobs:
         #- name: Maven MUnit
       #  run: mvn -X clean test
       - name: Maven Deploy
-        run: mvn -U -V -e -B -DskipTests deploy -DmuleDeploy -Dmule.version="4.3.0" -Danypoint.username="CLOUDHUB_USERNAME" -Danypoint.password="CLOUDHUB_PASSWORD" -Denv="dev" -Dcloudhub.app="github-actions" -Dcloudhub.environment="Sandbox" -Dcloudhub.bg="github-actions-logs" -Dcloudhub.worker="Micro"
+        run: mvn -U -V -e -B -DskipTests deploy -DmuleDeploy -Dmule.version="4.3.0" -Danypoint.username="${{secrets.CLOUDHUB_USERNAME}}" -Danypoint.password="${{secrets.CLOUDHUB_PASSWORD}}" -Denv="dev" -Dcloudhub.app="github-actions" -Dcloudhub.environment="Sandbox" -Dcloudhub.bg="github-actions-logs" -Dcloudhub.worker="Micro"
       #- name: Send email post job completion
       #  uses: dawidd6/action-send-mail@v2
       #  with:
